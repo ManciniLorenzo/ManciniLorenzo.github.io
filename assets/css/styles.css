@@ -140,7 +140,6 @@ img {
 .nav__link {
   position: relative;
   color: #fff;
-  display: none;
 }
 .nav__link:hover {
   position: relative;
