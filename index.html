@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!--==================== UNICONS ====================-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!--==================== SWIPER CSS ====================-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
     <!--==================== CSS ====================-->
     <link rel="stylesheet" href="assets/css/styles.css">
 
@@ -19,9 +25,6 @@
         })();
     </script>
 
-    <!-- =====BOX ICONS===== -->
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-
     <!--==================== TITLE and Favicon ====================-->
     <title>Lorenzo Mancini's Portfolio 👋</title>
     <!-- <link rel="shortcut icon" type="image/png" href="assets/img/"> -->
@@ -29,6 +32,21 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon_io/favicon-16x16.png">
     <!-- <link rel="manifest" href="/site.webmanifest"> -->
+
+    <!-- HTML Meta Tags -->
+    <title>Lorenzo Mancini's Portfolio 👋</title>
+    <meta name="description"
+        content="High-level experience in Information Technology Project Development.">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2367QRTG56"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-2367QRTG56');
+    </script>
 
 </head>
 
@@ -61,6 +79,11 @@
                         </a>
                     </li>
                     <li class="nav__item">
+                        <a href="#paper" class="nav__link">
+                            <i class="uil uil-scenery nav__icon"></i> Papers
+                        </a>
+                    </li>
+                    <li class="nav__item">
                         <a href="#contact" class="nav__link">
                             <i class="uil uil-message nav__icon"></i> Contact
                         </a>
@@ -82,72 +105,96 @@
     </header>
 
     <!--==================== MAIN ====================-->
-    <main class="l-main">
+    <main class="main">
         <!--==================== HOME ====================-->
-        <section class="home bd-grid" id="home">
+        <section class="home section" id="home" data-id="home">
+            <div class="home__container container grid">
+                <div class="home__content grid">
+                    <div class="home__social">
+                        <a href="https://www.linkedin.com/in/lorenzomancini13/" target="_blank"
+                            class="home__social-icon">
+                            <i class="uil uil-linkedin-alt"></i>
+                        </a>
+                        <a href="https://github.com/ManciniLorenzo" target="_blank" class="home__social-icon">
+                            <i class="uil uil-github-alt"></i>
+                        </a>
+                        <a href="https://www.instagram.com/mancini_lorenzo/" class="home__social-icon">
+                            <i class='bx bxl-instagram'></i>
+                        </a>
+                        <a href="https://www.facebook.com/lorenzomancini13/" class="home__social-icon">
+                            <i class='bx bxl-facebook'></i>
+                        </a>
+                        <a href="https://youtube.com/mancinilorenzo/" class="home__social-icon">
+                            <i class='bx bxl-youtube'></i>
+                        </a>
+                        <a href="https://x.com/mancinilorenzoo" class="home__social-icon">
+                            <i class='bx bxl-twitter'></i>
+                        </a>
+                    </div>
 
-            <div class="home__social">
-                <a href="https://www.linkedin.com/in/lorenzomancini13" class="home__social-icon"><i
-                        class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/ManciniLorenzo" class="home__social-icon"><i class='bx bxl-github'></i></a>
-                <a href="https://www.instagram.com/mancini_lorenzo/" class="home__social-icon"><i
-                        class='bx bxl-instagram'></i></a>
-                <a href="https://www.facebook.com/lorenzomancini13/" class="home__social-icon"><i
-                        class='bx bxl-facebook'></i></a>
-                <a href="https://youtube.com/mancinilorenzo/" class="home__social-icon"><i
-                        class='bx bxl-youtube'></i></a>
-                <a href="https://x.com/mancinilorenzoo" class="home__social-icon"><i class='bx bxl-twitter'></i></a>
-            </div>
+                    <div class="home__img">
+                        <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <mask id="mask0" mask-type="alpha">
+                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
+                            </mask>
+                            <g mask="url(#mask0)">
+                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
 
-            <div class="home__img">
-                <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <mask id="mask0" mask-type="alpha">
-                        <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                            130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                            97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                            0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
-                    </mask>
-                    <g mask="url(#mask0)">
-                        <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                            165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                            129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                            -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
+                                <image class="home__blob-img" x='12' y='18' xlink:href="assets/img/perfil.png" />
+                            </g>
+                        </svg>
+                    </div>
 
-                        <image class="home__blob-img" x='12' y='18' xlink:href="assets/img/profile.png" />
-                    </g>
-                </svg>
-            </div>
-            <div class="home__data">
-                <h1 class="home__title">Hi, I'm <span class="home__title-color">Lorenzo <img
-                            src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="50px" /></span></h1>
-                <h3 class="home__subtitle">Computer Engineer</h3>
-                <p class="home__description">I specialize in Information Technology Project Management and Software
-                    Development</p>
-                <a href="#contact" class="button button--flex">
-                    Contact Me <i class="uil uil-message button__icon"></i>
-                </a>
+                    <div class="home__data">
+                        <h1 class="home__title">Hi, I am <span class="home__title-color">Lorenzo.</span><img
+                                src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="50px" />
+                        </h1>
+                        <h3 class="home__subtitle">Computer Engineer</h3>
+                        <p class="home__description">I specialize in Information Technology Project Management and
+                            Software
+                            Development.
+                        </p>
+                        <a href="#contact" class="button button--flex">
+                            Contact Me <i class="uil uil-message button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="home__scroll">
+                    <a href="#about" class="home__scroll-button button--flex">
+                        <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+                        <span class="home__scroll-name">Scroll Down</span>
+                        <i class="uil uil-arrow-down home__scroll-arrow"></i>
+                    </a>
+                </div>
             </div>
         </section>
 
-        <!--===== ABOUT =====-->
-        <section class="about section" id="about">
-            <h2 class="section-title">About Me</h2>
+        <!--==================== ABOUT ====================-->
+        <section class="about section" id="about" data-id="about">
+            <h2 class="section__title">About Me</h2>
             <span class="section__subtitle">Introduction</span>
 
             <div class="about__container container grid">
-                <img src="assets/img/about.png" alt="Erol Bicer Nuclear Power Plants Summit Session" class="about__img">
-
+                <img src="assets/img/about.png" alt="Lorenzo Mancini" class="about__img">
 
                 <div class="about__data">
-                    <p class="about__description">I am interested in business development through IT, in fact I plan to
+                    <p class="about__description">
+                        I am interested in business development through IT, in fact I plan to
                         continue my studies at the Polytechnic University of Milan, in the Computer Science - ICT
                         Engineering, Business and Innovation course.
-
+                        <br>
                         Besides my passion for IT and business innovation, I have several interests that enrich my daily
                         life. I deeply love my dog, I am an amateur musician and play piano, also I practice brazilian
                         jiu jitsu at a competitive level.
-
+                        <br>
                         My simpler pleasures include sour beer tasting, love of sports and spending time outdoors in
                         nature.
                     </p>
@@ -159,12 +206,12 @@
                         </div>
 
                         <div>
-                            <span class="about__info-title">11+</span>
-                            <span class="about__info-name">Projects <br> Completed</span>
+                            <span class="about__info-title">1</span>
+                            <span class="about__info-name">Projects <br> Ongoing</span>
                         </div>
 
                         <div>
-                            <span class="about__info-title">13</span>
+                            <span class="about__info-title">0</span>
                             <span class="about__info-name">Papers <br> Published</span>
                         </div>
                     </div>
@@ -176,91 +223,192 @@
                     </div>
                 </div>
             </div>
-
-            <div class="about__container bd-grid">
-                <div class="about__img">
-                    <img src="assets/img/about.jpg" alt="">
-                </div>
-
-                <div>
-                    <h2 class="about__subtitle">I am Lorenzo</h2>
-                    <p class="about__text">I am interested in business development through IT, in fact I plan to
-                        continue my studies at the Polytechnic University of Milan, in the Computer Science - ICT
-                        Engineering, Business and Innovation course.
-
-                        Besides my passion for IT and business innovation, I have several interests that enrich my daily
-                        life. I deeply love my dog, I am an amateur musician and play piano, also I practice brazilian
-                        jiu jitsu at a competitive level.
-
-                        My simpler pleasures include sour beer tasting, love of sports and spending time outdoors in
-                        nature.
-                    </p>
-                </div>
-            </div>
         </section>
 
-        <!--===== SKILLS =====-->
+        <!--==================== SKILLS ====================-->
         <section class="skills section" id="skills" data-id="skills">
-            <h2 class="section-title">Skills</h2>
+            <h2 class="section__title">Skills</h2>
             <span class="section__subtitle">Technical Competence</span>
 
-            <div class="skills__container bd-grid">
+            <div class="skills__container container grid">
                 <div>
-                    <h2 class="skills__subtitle">Professional Skills</h2>
-                    <p class="skills__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit optio id
-                        vero amet, alias architecto consectetur error eum eaque sit.</p>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-html5 skills__icon'></i>
-                            <span class="skills__name">HTML5</span>
-                        </div>
-                        <div class="skills__bar skills__html">
+                    <!--==================== SKILLS 1 ====================-->
+                    <div class="skills__content skills__open">
+                        <div class="skills__header">
+                            <i class="uil uil-brackets-curly skills__icon"></i>
 
+                            <div>
+                                <h1 class="skills__titles">Engineering</h1>
+                                <!-- <span class="skills__subtitle">More than 8 years</span> -->
+                            </div>
+
+                            <i class="uil uil-angle-down skills__arrow"></i>
                         </div>
-                        <div>
-                            <span class="skills__percentage">95%</span>
+
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Critical thinking</h3>
+                                    <!--<span class="skills__number">Advanced</span> -->
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percantage skills__sys-code"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Agile and Reverse Engineering</h3>
+                                    <!--<span class="skills__number">Advanced</span> -->
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percantage skills__sys-code"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Analytical and Computational Skills</h3>
+                                    <!--<span class="skills__number">Advanced</span> -->
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percantage skills__sys-code"></span>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-css3 skills__icon'></i>
-                            <span class="skills__name">CSS3</span>
-                        </div>
-                        <div class="skills__bar skills__css">
 
-                        </div>
-                        <div>
-                            <span class="skills__percentage">85%</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-javascript skills__icon'></i>
-                            <span class="skills__name">JAVASCRIPT</span>
-                        </div>
-                        <div class="skills__bar skills__js">
+                    <!--==================== SKILLS 2 ====================-->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <i class="uil uil-vector-square skills__icon"></i>
 
-                        </div>
-                        <div>
-                            <span class="skills__percentage">65%</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxs-paint skills__icon'></i>
-                            <span class="skills__name">UX/UI</span>
-                        </div>
-                        <div class="skills__bar skills__ux">
+                            <div>
+                                <h1 class="skills__titles">Soft Skills</h1>
+                                <!-- <span class="skills__subtitle">More than 2 years</span> -->
+                            </div>
 
+                            <i class="uil uil-angle-down skills__arrow"></i>
                         </div>
-                        <div>
-                            <span class="skills__percentage">85%</span>
+
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Team Working</h3>
+                                    <!--<span class="skills__number">Proficient</span>-->
+                                </div>
+                                <div class="skills__bar">
+                                    <!--<span class="skills__percantage skills__80"></span>-->
+                                    <span class="skills__percantage skills__sys-code"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Problem Solving</h3>
+                                </div>
+                                <div class="skills__bar">
+                                    <!--<span class="skills__percantage skills__20"></span>-->
+                                    <span class="skills__percantage skills__sys-code"></span>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
 
                 <div>
-                    <img src="assets/img/work3.jpg" alt="" class="skills__img">
+                    <!--==================== SKILLS 3 ====================-->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <i class="uil uil-arrow skills__icon"></i>
+
+                            <div>
+                                <h1 class="skills__titles">Coding Languages</h1>
+                                <!-- <span class="skills__subtitle">More than 2 years</span> -->
+                            </div>
+
+                            <i class="uil uil-angle-down skills__arrow"></i>
+                        </div>
+
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Python</h3>
+                                    <!--<span class="skills__number">Proficient</span>-->
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percantage skills__sys-code"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">SQL</h3>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percantage skills__sys-code"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Java | C++ | C</h3>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percantage skills__sys-code"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">PHP | HTML | CSS</h3>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percantage skills__sys-code"></span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <!--==================== SKILLS 4 ====================-->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <i class="uil uil-code-branch skills__icon"></i>
+
+                            <div>
+                                <h1 class="skills__titles">Tools</h1>
+                                <!-- <span class="skills__subtitle">More than 2 years</span> -->
+                            </div>
+
+                            <i class="uil uil-angle-down skills__arrow"></i>
+                        </div>
+
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">VS Code</h3>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percantage skills__sys-code"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Git | GitHub</h3>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percantage skills__sys-code"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -426,7 +574,7 @@
 
                     <div class="projects__modal">
                         <div class="projects__modal-content">
-                            <h4 class="projects__modal-title">Device for Embedded Communications </h4>
+                            <h4 class="projects__modal-title">Communication Device </h4>
                             <i class="uil uil-times projects__modal-close"></i>
 
                             <ul class="projects__modal-projects grid">
@@ -446,6 +594,45 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!--==================== PAPERS ====================-->
+        <section class="paper section" id="paper" data-id="paper">
+            <h2 class="section__title">Papers</h2>
+            <span class="section__subtitle">Published Papers</span>
+
+            <div class="paper__container container swiper">
+                <div class="swiper-wrapper">
+                    <!--==================== PAPER 1 ====================-->
+                    <div class="paper__content grid swiper-slide">
+                        <img src="assets/img/paper1.jpg" alt="CFD code OpenFOAM mesh for pool scrubbing geometry"
+                            class="paper__img">
+
+                        <div class="paper__dat">
+                            <h3 class="paper__title">#poolscrubbing</h3>
+                            <p class="paper__description">CFD Simulation of High Inlet Velocity Air Flow into a Large
+                                Tank at Pool Scrubbing Conditions</p>
+                            <a href="https://www.researchgate.net/publication/355117622_CFD_Simulation_of_High_Inlet_Velocity_Air_Flow_into_a_Large_Tank_at_Pool_Scrubbing_Conditions"
+                                target="_blank" class="button button--flex button--small paper__button">
+                                Read
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add Arrows -->
+                <div class="swiper-button-next">
+                    <i class="uil uil-angle-right-b swiper-paper-icon"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="uil uil-angle-left-b swiper-paper-icon"></i>
+                </div>
+
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
         </section>
 
         <!--==================== VIDEOS ====================-->
@@ -457,7 +644,8 @@
                 <div class="videos__content-top">
                     <div class="iframe__container">
                         <span class="videos__subtitle">Video 1</span>
-                        <iframe class="iframe" width="100%" height="100%" src="https://www.youtube.com/" frameborder="0"
+                        <iframe class="iframe" width="100%" height="100%" src="https://www.youtube.com/embed/"
+                            frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                     </div>
@@ -465,9 +653,31 @@
                 <div class="videos__content">
                     <div class="iframe__container">
                         <span class="videos__subtitle">Video 2</span>
-                        <iframe class="iframe" width="100%" height="100%" src="https://www.youtube.com/" frameborder="0"
+                        <iframe class="iframe" width="100%" height="100%" src="https://www.youtube.com/embed/"
+                            frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== PRESENTATION ====================-->
+        <section class="presentation section" id="presentation">
+            <h2 class="section__title">Presentations</h2>
+            <span class="section__subtitle">Talks and Meetings</span>
+
+            <div class="presentation__container container grid">
+                <div class="presentation__content">
+                    <div class="iframe__container">
+                        <span class="presentation__subtitle">Presentation 1</span>
+                        <iframe allowfullscreen class="iframe" width="100%" height="100%"
+                            src="https://www.beautiful.ai/embed/-N9WTeD278rsbcimSTFQ?utm_source=beautiful_player&utm_medium=embed&utm_campaign=-N9WS-JQcqI9yrHAPO0K"></iframe>
+                    </div>
+                    <div class="iframe__container">
+                        <span class="presentation__subtitle">Presentation 2</span>
+                        <iframe allowfullscreen class="iframe" width="100%" height="100%"
+                            src="https://www.beautiful.ai/embed/-N9ApKSzKtHuNwFS2cEY?utm_source=beautiful_player&utm_medium=embed&utm_campaign=-N9AnjGmWtBp2Tgf5cej"></iframe>
                     </div>
                 </div>
             </div>
@@ -485,7 +695,7 @@
 
                         <div>
                             <h3 class="contact__title">Call Me</h3>
-                            <span class="contact__subtitle">+39 </span>
+                            <span class="contact__subtitle">+39</span>
                         </div>
                     </div>
 
@@ -494,6 +704,7 @@
 
                         <div>
                             <h3 class="contact__title">Email</h3>
+                            <!-- <span class="contact__subtitle">info.lorenzomancini@gmail.com</span> -->
                             <p><a class="contact__subtitle"
                                     href="mailto:info.lorenzomancini@gmail.com">info.lorenzomancini@gmail.com</a></p>
                         </div>
@@ -545,7 +756,7 @@
         </section>
     </main>
 
-    <!--===== FOOTER =====-->
+    <!--==================== FOOTER ====================-->
     <footer class="footer">
         <div class="footer__bg">
             <div class="footer__container container grid">
@@ -554,28 +765,66 @@
                     <span class="footer__subtitle">Computer Engineer</span>
                 </div>
 
-                <div class="footer__social">
-                    <a href="https://www.linkedin.com/in/lorenzomancini13/" class="footer__social"><i
-                            class='bx bxl-linkedin'></i></a>
-                    <a href="https://github.com/ManciniLorenzo/" class="footer__social"><i class='bx bxl-github'></i></a>
-                    <a href="https://www.instagram.com/mancini_lorenzo/" class="footer__social"><i
-                            class='bx bxl-instagram'></i></a>
-                    <a href="https://www.facebook.com/lorenzomancini13/" class="footer__social"><i
-                            class='bx bxl-facebook'></i></a>
-                    <a href="https://youtube.com/mancinilorenzo/" class="footer__social"><i
-                            class='bx bxl-youtube'></i></a>
-                    <a href="https://x.com/mancinilorenzoo/" class="footer__social"><i class='bx bxl-twitter'></i></a>
+                <ul class="footer__links">
+                    <li>
+                        <a href="#projects" class="footer__link">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#paper" class="footer__link">Papers</a>
+                    </li>
+                    <li>
+                        <a href="#testimonials" class="footer__link">References</a>
+                    </li>
+                    <li>
+                        <a href="#videos" class="footer__link">Videos</a>
+                    </li>
+                    <li>
+                        <a href="#meeting" class="footer__link">Meeting</a>
+                    </li>
+                    <li>
+                        <a href="#presentation" class="footer__link">Presentations</a>
+                    </li>
+                </ul>
+
+                <div class="footer__socials">
+                    <a href="https://www.linkedin.com/in/lorenzomancini13/" target="_blank" class="footer__social">
+                        <i class="uil uil-linkedin-alt"></i>
+                    </a>
+                    <a href="https://github.com/ManciniLorenzo/" target="_blank" class="footer__social">
+                        <i class="uil uil-book-open"></i>
+                    </a>
+                    <a href="https://github.com/ManciniLorenzo/" target="_blank" class="footer__social">
+                        <i class="uil uil-github-alt"></i>
+                    </a>
+                    <a href="https://www.instagram.com/mancini_lorenzo/" target="_blank" class="footer__social">
+                        <i class='bx bxl-instagram'></i>
+                    </a>
+                    <a href="https://www.facebook.com/lorenzomancini13/" target="_blank" class="footer__social">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+                    <a href="https://youtube.com/mancinilorenzo/" target="_blank" class="footer__social">
+                        <i class='bx bxl-youtube'></i>
+                    </a>
+                    <a href="https://x.com/mancinilorenzoo/" target="_blank" class="footer__social">
+                        <i class='bx bxl-twitter'></i>
+                    </a>
+
                 </div>
             </div>
-            <p class="footer__copy">&#169;2024 Lorenzo Mancini. All rigths reserved</p>
+
+            <p class="footer__copy">&#169; All rights reserved.</p>
         </div>
     </footer>
 
+    <!--==================== SCROLL TOP ====================-->
+    <a href="" class="scrollup" id="scroll-up">
+        <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
 
-    <!--===== SCROLL REVEAL =====-->
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <!--==================== SWIPER JS ====================-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
 
-    <!--===== MAIN JS =====-->
+    <!--==================== MAIN JS ====================-->
     <script src="assets/js/main.js"></script>
 </body>
 
