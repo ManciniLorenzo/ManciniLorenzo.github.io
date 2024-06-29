@@ -4,15 +4,35 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <!--==================== CSS ====================-->
         <link rel="stylesheet" href="assets/css/styles.css">
+
+        <!--==================== EMAIL SERVICE ====================-->
+        <!-- Sweet Alert -->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <!-- Email.JS -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                emailjs.init('gF3M_-jS8KuvoCpV4');
+            })();
+        </script>
 
         <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
-        <title>Portfolio Website</title>
+        <!--==================== TITLE and Favicon ====================-->
+        <title>Lorenzo Mancini's Portfolio 👋</title>
+        <!-- <link rel="shortcut icon" type="image/png" href="assets/img/"> --> 
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon_io/favicon-16x16.png">
+        <!-- <link rel="manifest" href="/site.webmanifest"> -->
+
     </head>
+
     <body>
-        <!--===== HEADER =====-->
+        <!--==================== HEADER ====================-->
         <header class="l-header">
             <nav class="nav bd-grid">
                 <div>
@@ -24,7 +44,7 @@
                         <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
                         <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                         <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#works" class="nav__link">Works</a></li>
+                        <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                     </ul>
                 </div>
@@ -35,8 +55,9 @@
             </nav>
         </header>
 
+        <!--==================== MAIN ====================-->
         <main class="l-main">
-            <!--===== HOME =====-->
+            <!--==================== HOME ====================-->
             <section class="home bd-grid" id="home">
 
                 <div class="home__social">
@@ -67,9 +88,7 @@
                     </svg>
                 </div>
                 <div class="home__data">
-                    <h1 class="home__title">Hi, I'm <span class="home__title-color">Lorenzo</span>
-                        <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="50px"/>
-                    </h1>
+                    <h1 class="home__title">Hi, I'm <span class="home__title-color">Lorenzo <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="50px"/></span></h1>
                     <h3 class="home__subtitle">Computer Engineer</h3>
                     <p class="home__description">I specialize in Information Technology Project Management and Software Development</p>
                     <a href="#contact" class="button button--flex">
@@ -79,8 +98,46 @@
             </section>
 
             <!--===== ABOUT =====-->
-            <section class="about section " id="about">
-                <h2 class="section-title">About</h2>
+            <section class="about section" id="about">
+                <h2 class="section-title">About Me</h2>
+                <span class="section__subtitle">Introduction</span>
+
+                <div class="about__container container grid">
+                    <img src="assets/img/about.png" alt="Erol Bicer Nuclear Power Plants Summit Session" class="about__img">
+
+
+                    <div class="about__data">
+                        <p class="about__description">I am interested in business development through IT, in fact I plan to continue my studies at the Polytechnic University of Milan, in the Computer Science - ICT Engineering, Business and Innovation course.
+
+                            Besides my passion for IT and business innovation, I have several interests that enrich my daily life. I deeply love my dog, I am an amateur musician and play piano, also I practice brazilian jiu jitsu at a competitive level.
+                            
+                            My simpler pleasures include sour beer tasting, love of sports and spending time outdoors in nature.
+                        </p>
+
+                        <div class="about__info">
+                            <div>
+                                <span class="about__info-title">08+</span>
+                                <span class="about__info-name">Years' <br> Experience</span>
+                            </div>
+
+                            <div>
+                                <span class="about__info-title">11+</span>
+                                <span class="about__info-name">Projects <br> Completed</span>
+                            </div>
+
+                            <div>
+                                <span class="about__info-title">13</span>
+                                <span class="about__info-name">Papers <br> Published</span>
+                            </div>
+                        </div>
+
+                        <div class="about__buttons">
+                            <a download="" href="assets/pdf/CV_LorenzoMancini.pdf" class="button button--flex">
+                                Download CV<i class="uil uil-download-alt button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="about__container bd-grid">
                     <div class="about__img">
@@ -93,13 +150,16 @@
 
                             Besides my passion for IT and business innovation, I have several interests that enrich my daily life. I deeply love my dog, I am an amateur musician and play piano, also I practice brazilian jiu jitsu at a competitive level.
                             
-                            My simpler pleasures include sour beer tasting, love of sports and spending time outdoors in nature.</p>                    </div>                                   
+                            My simpler pleasures include sour beer tasting, love of sports and spending time outdoors in nature.
+                        </p>
+                    </div>                                   
                 </div>
             </section>
 
             <!--===== SKILLS =====-->
-            <section class="skills section" id="skills">
+            <section class="skills section" id="skills" data-id="skills">
                 <h2 class="section-title">Skills</h2>
+                <span class="section__subtitle">Technical Competence</span>
 
                 <div class="skills__container bd-grid">          
                     <div>
@@ -161,42 +221,273 @@
                 </div>
             </section>
 
-            <!--===== WORK =====-->
-            <section class="work section" id="works">
-                <h2 class="section-title">Works</h2>
+            <!--==================== QUALIFICATION ====================-->
+            <section class="qualification section">
+                <h2 class="section__title">Qualifications</h2>
+                <span class="section__subtitle">Academic and Professional Career</span>
 
-                <div class="work__container bd-grid">
-                    <a href="" class="work__img">
-                        <img src="assets/img/work1.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work2.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work3.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work4.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work5.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work6.jpg" alt="">
-                    </a>
+                <div class="qualification__container container">
+                    <div class="qualification__tabs">
+                        <div class="qualification__button button--flex qualification__active" data-target="#education">
+                            <i class="uil uil-graduation-cap qualification__icon"></i>
+                            Education
+                        </div>
+
+                        <div class="qualification__button button--flex" data-target="#work">
+                            <i class="uil uil-briefcase-alt qualification__icon"></i>
+                            Work
+                        </div>
+                    </div>
+                    <div class="qualification__sections">
+
+                        <!--==================== EDUCATION ====================-->
+                        <div class="qualification__content qualification__active" data-content id="education">
+                             <!--==================== QUALIFICATION  1 ====================-->
+                             <div class="qualification__data">
+                                <div>
+                                    <span class="qualification__degree">B.Sc.</span>
+                                    <h3 class="qualification__title">Computer Engineering</h3>
+                                    <span class="qualification__subtitle">University of Padua</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        2024
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+                            </div>
+
+                             <!--==================== QUALIFICATION  2 ====================-->
+                             <div class="qualification__data">
+                                <div></div>
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+
+                                <div>
+                                    <span class="qualification__degree">M.Sc.</span>
+                                    <h4 class="qualification__title">Computer Science and Engineering</h4>
+                                    <span class="qualification__subtitle">Polytechnic University of Milan</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        202?
+                                    </div>
+                                </div>
+
+                            </div>
+
+                             <!--==================== QUALIFICATION  3 ====================-->
+                             <div class="qualification__data">
+                                <!-- <div></div> -->
+
+                                <!-- <div>
+                                    <span class="qualification__rounder"></span> -->
+                                    <!-- <span class="qualification__line"></span> -->
+                                <!-- </div> -->
+
+                                <!-- <div>
+                                    <h3 class="qualification__title">Nuclear Engineer</h3>
+                                    <span class="qualification__subtitle">Hacettepe University</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        2008 - 2013
+                                    </div>
+                                </div> -->
+
+
+                                
+                            </div>
+
+                        </div>
+
+                        <!--==================== WORKS ====================-->
+                        <div class="qualification__content" data-content id="work">
+                            <!--==================== QUALIFICATION  1 ====================-->
+                            <div class="qualification__data">
+                               <div>
+                                   <h3 class="qualification__title">IT Technician</h3>
+                                   <span class="qualification__subtitle">Otto Gioielli</span>
+                                   <div class="qualification__calendar">
+                                       <i class="uil uil-calendar-alt"></i>
+                                       2018
+                                   </div>
+                               </div>
+                               <div>
+                                   <span class="qualification__rounder"></span>
+                                   <span class="qualification__line"></span>
+                               </div>
+                           </div>
+
+                            <!--==================== QUALIFICATION  2 ====================-->
+                            <div class="qualification__data">
+                               <div></div>
+                               <div>
+                                   <span class="qualification__rounder"></span>
+                                   <span class="qualification__line"></span>
+                               </div>
+
+                               <div>
+                                   <h3 class="qualification__title">IT Technician</h3>
+                                   <span class="qualification__subtitle">Mamix srl</span>
+                                   <div class="qualification__calendar">
+                                       <i class="uil uil-calendar-alt"></i>
+                                       2019
+                                   </div>
+                               </div>
+
+                           </div>
+
+                            <!--==================== QUALIFICATION  3 ====================-->
+                            <div class="qualification__data">
+                               <div>
+                                   <h3 class="qualification__title">Software Engineer</h3>
+                                   <span class="qualification__subtitle">Huracan Marine srl</span>
+                                   <div class="qualification__calendar">
+                                       <i class="uil uil-calendar-alt"></i>
+                                       2024
+                                   </div>
+                               </div>
+                               <div>
+                                   <span class="qualification__rounder"></span>
+                                   <span class="qualification__line"></span>
+                               </div>
+                           </div>
+
+                       </div>
+
+                    </div>
                 </div>
             </section>
 
-            <!--===== CONTACT =====-->
-            <section class="contact section" id="contact">
-                <h2 class="section-title">Contact me</h2>
+            <!--==================== PROJECTS ====================-->
+            <section class="projects section" id="projects" data-id="projects">
+                <h2 class="section__title">Projects</h2>
+                <span class="section__subtitle">Involved Projects</span>
 
-                <div class="contact__container bd-grid">
-                    <form action="" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" value="Send" class="contact__button button">
+                <div class="projects__container container grid">
+                    <!--==================== PROJECTS 1 ====================-->
+                    <div class="projects__content">
+                        <div>
+                            <i class="uil uil-swatchbook projects__icon"></i>
+                            <h3 class="projects__title">CommDevice</h3>
+                        </div>
+
+                        <span class="button button--flex button--small button--link projects__button">
+                            View More
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </span>
+
+                        <div class="projects__modal">
+                            <div class="projects__modal-content">
+                                <h4 class="projects__modal-title">Device for Embedded Communications </h4>
+                                <i class="uil uil-times projects__modal-close"></i>
+
+                                <ul class="projects__modal-projects grid">
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>IT Project Management</p>
+                                    </li>
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>Agile Methodologies Applications</p>
+                                    </li>
+                                    <li class="projects__modal-project">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <p>Software Development</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> 
+            </section>
+
+            <!--==================== VIDEOS ====================-->
+            <section class="videos section" id="videos">
+                <h2 class="section__title">Videos</h2>
+                <span class="section__subtitle">Appearances</span>
+
+                <div class="videos__container container grid">
+                    <div class="videos__content-top">
+                        <div class="iframe__container">
+                            <span class="videos__subtitle">Video 1</span>
+                            <iframe class="iframe" width="100%" height="100%" src="https://www.youtube.com/" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="videos__content">
+                        <div class="iframe__container">
+                            <span class="videos__subtitle">Video 2</span>
+                            <iframe class="iframe" width="100%" height="100%" src="https://www.youtube.com/" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>   
+                 </div>
+            </section>
+
+            <!--==================== CONTACT ME ====================-->
+            <section class="contact section" id="contact" data-id="contact">
+                <h2 class="section__title">Contact Me</h2>
+                <span class="section__subtitle">Get in Touch</span>
+
+                <div class="contact__container container grid">
+                    <div>
+                        <div class="contact__information">
+                            <i class="uil uil-phone contact__icon"></i>
+
+                            <div>
+                                <h3 class="contact__title">Call Me</h3>
+                                <span class="contact__subtitle">+39 </span>
+                            </div>
+                        </div>
+
+                        <div class="contact__information">
+                            <i class="uil uil-envelope contact__icon"></i>
+
+                            <div>
+                                <h3 class="contact__title">Email</h3>
+                                <p><a class="contact__subtitle" href="mailto:info.lorenzomancini@gmail.com">info.lorenzomancini@gmail.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact__information">
+                            <i class="uil uil-map-marker contact__icon"></i>
+
+                            <div>
+                                <h3 class="contact__title">Location</h3>
+                                <span class="contact__subtitle">Valdobbiadene, Italy</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form action="" class="contact__form grid">
+                        <div class="contact__inputs grid">
+                            <div class="contact__content">
+                                <label for="" class="contact__label">Full Name</label>
+                                <input type="text" placeholder="Enter full name" class="contact__input" id="fullName" onkeyup="validateName()">
+                                <span id="name-error" class="contact__subtitle"></span>
+                            </div>
+                            <div class="contact__content">
+                                <label for="" class="contact__label">Email</label>
+                                <input type="email" placeholder="Enter email address" class="contact__input" id="email_id" onkeyup="validateEmail()">
+                                <span id="email-error" class="contact__subtitle"></span>
+                            </div>
+                        </div>
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Subject</label>
+                            <input type="text" id="subject" placeholder="Enter a subject line" class="contact__input">
+                        </div>
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Message</label>
+                            <textarea name="" cols="0" rows="7" placeholder="Enter your message" class="contact__input" id="message" onkeyup="validateMessage()"></textarea>
+                            <span id="message-error" class="contact__subtitle"></span>
+                        </div>
+                        <div>
+                            <a onclick="return SendMail()" class="button button--flex">
+                            Send Message
+                            <i class="uil uil-message button__icon"></i>
+                        </a>
+                        </div>
                     </form>
                 </div>
             </section>
@@ -204,7 +495,11 @@
 
         <!--===== FOOTER =====-->
         <footer class="footer">
-            <p class="footer__title">Lorenzo Mancini</p>
+            <div>
+                <a href="#" class="footer__title">Lorenzo Mancini</a><br>
+                <span class="footer__subtitle">Computer Engineer</span>
+            </div>
+
             <div class="footer__social">
                 <a href="https://www.linkedin.com/in/lorenzomancini13/" class="footer__icon"><i class='bx bxl-linkedin' ></i></a>
                 <a href="https://github.com/ManciniLorenzo/" class="footer__icon"><i class='bx bxl-github' ></i></a>
