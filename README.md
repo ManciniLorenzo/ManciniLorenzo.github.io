@@ -1,5 +1,5 @@
 # Lorenzo Mancini's Responsive Portfolio Website
-## Website URL: www.mancinilorenzo.github.io
+## Website URL: [https://mancinilorenzo.github.io/](https://mancinilorenzo.github.io/)
 
 - The design is based on [Bedimcode](https://github.com/bedimcode)
 - The email service provider is [EmailJs](https://www.emailjs.com/)
